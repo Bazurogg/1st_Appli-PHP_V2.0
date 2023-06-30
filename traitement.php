@@ -19,7 +19,7 @@
 
             ];
 
-            $_SESSION['product'][] = $product;
+            $_SESSION['products'][] = $product;
 
         }
 

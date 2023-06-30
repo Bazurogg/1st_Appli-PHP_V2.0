@@ -37,7 +37,7 @@
                 <label>
     
                     Price of product :
-                    <input type="number " name="name" step"any" name="price">
+                    <input type="number" step="any" name="price">
     
                 </label>
     
@@ -47,7 +47,7 @@
                 <label>
     
                     Desired quantity :
-                    <input type="number " name="qtt" step"any" value="1">
+                    <input type="number" name="qtt" step"any" value="1">
     
                 </label>
     
@@ -60,7 +60,7 @@
             </p>
     
         </form>
-        
+
     </div>
 
     

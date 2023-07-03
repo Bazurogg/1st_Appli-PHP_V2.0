@@ -25,9 +25,10 @@
 
             <div class="cart-navbar" id="nav-bar">
 
-                <div class="navbar-iconbox" onclick="toggleNav()">
+                <div class="navbar-iconbox" id="toggle-icon">
 
-                    <i class="fa-solid fa-basket-shopping"></i>
+                    <!-- <i class="fa-solid fa-basket-shopping"></i> -->
+                    <i class="fa-solid fa-bars"></i>
 
                 </div>
 
@@ -108,7 +109,7 @@
                         $qttTotal += $product['qtt'];
                     }
 
-                    echo "<p><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></p>"."<br>";
+                    echo "<p>Total à payer de votre panier : " . "<strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></p>"."<br>";
                     echo "Il y a : " . "<td><strong>".$qttTotal."</strong></td>" . " articles dans votre panier.";
 
                 ?>
@@ -119,7 +120,7 @@
 
     </div> 
 
-    <script src="/script.js"></script>
+    <script src="/myscript.js"></script>
 
 </body>
 </html>

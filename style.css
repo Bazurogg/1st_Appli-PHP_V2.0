@@ -32,21 +32,24 @@ body {
     
 }
 
-.cart-navbar {
+
+
+#nav-bar {
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;
-    height: 200px;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
 
 }
 
 
-
 #nav-bar.active {
     
-    height: 400px;
+    width: 250px;
+    height: 300px;
     
 }
 
@@ -91,14 +94,14 @@ ul {
 
 }
 
-i.fa-basket-shopping {
+.fa-solid.fa-bars {
 
     color: white;
     font-size: 40px;
 
 }
 
-i.fa-basket-shopping:hover {
+.fa-solid.fa-bars:hover {
 
     cursor: pointer;
 

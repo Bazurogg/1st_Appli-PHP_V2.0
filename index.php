@@ -28,17 +28,17 @@
                 <div class="navbar-iconbox" id="toggle-icon">
 
                     <!-- <i class="fa-solid fa-basket-shopping"></i> -->
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars" id="toggle-bars"></i>
 
                 </div>
 
-                <ul class="ul-navbar">
+                <div class="navbar">
 
-                    <li class="nav-btn"><a href="/index.php">Fruits Basket</a></li>
+                    <div class="nav-btn"><a href="index.php"><i class="fa-solid fa-cart-arrow-down nav-icon"></i></a></div>
 
-                    <li class="nav-btn"><a href="/recap.php">Recap</a></li>
+                    <div class="nav-btn"><a href="recap.php"><i class="fa-solid fa-basket-shopping nav-icon"></i></a></div>
 
-                </ul>
+                </div>
 
             </div>
 
@@ -120,7 +120,7 @@
 
     </div> 
 
-    <script src="/myscript.js"></script>
+    <script src="myscript.js"></script>
 
 </body>
 </html>

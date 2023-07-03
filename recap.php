@@ -26,9 +26,9 @@
 
             <ul class="ul-navbar">
 
-                <li class="nav-btn"><a href="/index.php">Fruits Basket</a></li>
+                <li class="nav-btn"><a href="index.php">Fruits Basket</a></li>
 
-                <li class="nav-btn"><a href="/recap.php">Recap</a></li>
+                <li class="nav-btn"><a href="recap.php">Recap</a></li>
 
             </ul>
 

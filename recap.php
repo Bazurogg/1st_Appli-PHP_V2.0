@@ -11,6 +11,8 @@
 </head>
 <body>
 
+
+
     <?php
 
         if(!isset($_SESSION['products']) || empty($_SESSION['products'])) {

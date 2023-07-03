@@ -7,11 +7,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c892bba6ed.js" crossorigin="anonymous"></script>
     <title>Mon panier simulator</title>
 </head>
 <body>
 
     <div class="main">
+
+        <div class="nav-box" id="navbox" onclick="togglePlz()">
+
+            <div class="cart-navbar">
+
+                <div class="navbar-iconbox">
+
+                    <i class="fa-solid fa-basket-shopping"></i>
+
+                </div>
+
+                <ul class="ul-navbar">
+
+                    <li class="nav-btn"><a href="/index.php">Fruits Basket</a></li>
+
+                    <li class="nav-btn"><a href="/recap.php">Recap</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
 
         <div class="form-box">
 
@@ -54,7 +77,7 @@
         
                 <p>
         
-                    <input type="submit" name="submit" value="Add product" class="add-btn">
+                    <input type="submit" name="submit" value="Add to basket" class="add-btn">
         
                 </p>
         
@@ -62,10 +85,21 @@
 
         </div>
 
+        <div class="txtalert-box">
+
+            <span>Alert box WIP</span>
+
+            <div class="txt-alert">
+
+            </div>
+
+        </div>
+
     </div>
 
     
-    <script src="https://kit.fontawesome.com/c892bba6ed.js" crossorigin="anonymous"></script>
+
+    <script src="/script.js"></script>
 
 </body>
 </html>

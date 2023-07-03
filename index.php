@@ -1,3 +1,10 @@
+<?php
+
+    session_start();
+
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +21,11 @@
 
     <div class="main">
 
-        <div class="nav-box" id="navbox" onclick="togglePlz()">
+        <div class="nav-box">
 
-            <div class="cart-navbar">
+            <div class="cart-navbar" id="nav-bar">
 
-                <div class="navbar-iconbox">
+                <div class="navbar-iconbox" onclick="toggleNav()">
 
                     <i class="fa-solid fa-basket-shopping"></i>
 
@@ -46,7 +53,7 @@
         
                 Et "method" précise par quelle méthode HTTP les données du formulaire sont transmises au serveur.
         
-                La méthode "POST" est choisie ici à défaut de "GET" pour ne pas encombrer L'URL avec les données du formulaire -->
+                La méthode "POST" est choisie ici à défaut de "GET" pour ne pas encombrer l'URL avec les données du formulaire -->
         
                 <p>
                     <label>
@@ -87,17 +94,30 @@
 
         <div class="txtalert-box">
 
-            <span>Alert box WIP</span>
+            <span>Info box WIP</span>
 
             <div class="txt-alert">
+
+                <?php
+
+                    $totalGeneral = 0;
+                    $qttTotal = 0;
+
+                    foreach($_SESSION['products'] as $index => $product) {
+                        $totalGeneral += $product['total'];
+                        $qttTotal += $product['qtt'];
+                    }
+
+                    echo "<p><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></p>"."<br>";
+                    echo "Il y a : " . "<td><strong>".$qttTotal."</strong></td>" . " articles dans votre panier.";
+
+                ?>
 
             </div>
 
         </div>
 
-    </div>
-
-    
+    </div> 
 
     <script src="/script.js"></script>
 

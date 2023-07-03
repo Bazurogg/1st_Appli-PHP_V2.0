@@ -37,46 +37,35 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80px;
-    height: 40px;
+    width: 250px;
+    height: 200px;
 
 }
 
 
-#navbox {
-    transition: height 0.8s;
-    height: auto;
-}
 
-#navbox:hover {
-
+#nav-bar.active {
     
-    cursor: pointer;
-
-}
-
-#navbox.active {
-
     height: 400px;
-
+    
 }
 
 .nav-btn {
-
+    
     color: white;
     font-size: 20px;
-
+    
 }
 
 a {
-
+    
     color: inherit;
     text-decoration: none;
-
+    
 }
 
 .nav-box {
-
+    
     max-width: fit-content;
     max-height: fit-content;
     padding: 20px;
@@ -84,18 +73,21 @@ a {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.206) 0px 1px 4px;
     overflow: hidden;
-
+    
 }
 
+
 ul {
-
+    
     list-style-type: none;
-
+    
 }
 
 .ul-navbar {
 
     padding-top: 20px;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -105,6 +97,14 @@ i.fa-basket-shopping {
     font-size: 40px;
 
 }
+
+i.fa-basket-shopping:hover {
+
+    cursor: pointer;
+
+}
+
+
 
 h1 {
 
@@ -187,3 +187,9 @@ span {
 
 }
 
+.txt-alert {
+
+    color: white;
+    
+
+}

@@ -1,0 +1,24 @@
+
+ * {
+
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    
+} 
+
+
+html {
+
+    width: 100%;
+    height: 100%;
+    font-family: 'Arimo', sans-serif;
+
+}
+
+body {
+
+    background: url(images/bg/wp7577773-autumn-fruits-wallpapers.jpg);
+    background-size: cover;
+ 
+}

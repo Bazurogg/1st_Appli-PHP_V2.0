@@ -3,9 +3,9 @@
 // ----------------------------------------- Nav Bar -------------------------------------------------]
 
 
-let navBar = document.getElementById("cart-navbar");
+let navBar = document.getElementById("nav-bar");
 
-function togglePlz() {
+function toggleNav() {
+    navBar.classList.toggle("active");
     console.log("hey")
-    // navBar.classList.toggle("active");
 }

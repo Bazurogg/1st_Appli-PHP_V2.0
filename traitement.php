@@ -47,10 +47,11 @@
                     unset($_SESSION['products']);
 
                     $_SESSION['alert'] = "Your basket have cancelled !";
+
                 
                 }
                 break;
-                
+
                 
             case "":
                 

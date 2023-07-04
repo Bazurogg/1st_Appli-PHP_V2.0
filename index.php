@@ -48,7 +48,7 @@
 
             <h1>Add a product</h1>
         
-            <form action="traitement.php" method="post"> 
+            <form action="traitement.php?action=add" method="post"> 
         
                 <!-- "action" indique le fichier cible du formulaire lorsque l'utilisateur soumets le formulaire.
         
@@ -105,24 +105,32 @@
 
                     $qttTotal = 0;
 
+                    
+                    
+
                     if(!isset($_SESSION['products']) || empty($_SESSION['products'])) {
                         
                         echo "<p class='info-txt'>Hello ! To Start please add an article.</p>";
                         
                     } else {
 
+                        $_SESSION['alert'] = " ";
+
                         foreach($_SESSION['products'] as $index => $product) {
                             
                             $qttTotal += $product['qtt'];
-                            
-                        }
-                        
-                        if (isset($_SESSION['alert'])){
-                            
+
                             echo "<p class='p-alert'>" . $_SESSION['alert'] . "</p>";
-                            // unset($_SESSION['alert']);
+                            
 
                         }
+                        
+                        // if (isset($_SESSION['alert'])){
+                            
+                        //     echo "<p class='p-alert'>" . $_SESSION['alert'] . "</p>";
+                        //     unset($_SESSION['alert']);
+
+                        // }
 
                         echo "Il y a : " . "<td><strong>".$qttTotal."</strong></td>" . " articles dans votre panier.";
                         echo "<p>Total à payer de votre panier : " . "<strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></p>"."<br>";

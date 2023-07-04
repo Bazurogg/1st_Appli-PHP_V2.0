@@ -103,7 +103,7 @@
             ?>
 
 
-            <a href = "traitement.php?action=deleteAll"><button id="dumpout">Cancel basket</button></a>
+            <a href = 'traitement.php?action=deleteAll'><button id="dumpout">Cancel basket</button></a>
 
 
         </div>

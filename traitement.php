@@ -34,6 +34,4 @@
 
     header("location:index.php");
 
-    
-
 ?>

@@ -102,6 +102,8 @@
             ?>
 
 
+            <a href = "traitement.php?action=delete"><button id="dumpout">Cancel basket</button></a>
+
 
         </div>
     

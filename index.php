@@ -112,11 +112,18 @@
                     } else {
 
                         foreach($_SESSION['products'] as $index => $product) {
-                            $totalGeneral += $product['total'];
+                            
                             $qttTotal += $product['qtt'];
+                            
                         }
                         
-                        echo "<p class='p-alert'>" . $_SESSION['alert'] . "</p>";
+                        if (isset($_SESSION['alert'])){
+                            
+                            echo "<p class='p-alert'>" . $_SESSION['alert'] . "</p>";
+                            // unset($_SESSION['alert']);
+
+                        }
+
                         echo "Il y a : " . "<td><strong>".$qttTotal."</strong></td>" . " articles dans votre panier.";
                         echo "<p>Total à payer de votre panier : " . "<strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></p>"."<br>";
                     

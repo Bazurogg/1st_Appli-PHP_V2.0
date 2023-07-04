@@ -41,7 +41,7 @@ body {
     align-items: center;
     width: 20px;
     height: 20px;
-    transition: 0.3s;
+    transition: 0.4s;
 
 }
 
@@ -112,7 +112,8 @@ a {
 
     transform: rotate(270deg);
 
-    color: rgb(92, 251, 174);
+    /* color: rgb(92, 251, 174); */
+    color: white;
 
 }
 

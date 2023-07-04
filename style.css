@@ -52,7 +52,6 @@ body {
     
 }
 
-
 .nav-btn {
     
     color: white;
@@ -76,13 +75,6 @@ a {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.206) 0px 1px 4px;
     overflow: hidden;
-    
-}
-
-
-ul {
-    
-    list-style-type: none;
     
 }
 
@@ -120,7 +112,7 @@ ul {
 
     transform: rotate(270deg);
 
-    color: grey;
+    color: rgb(92, 251, 174);
 
 }
 
@@ -207,7 +199,7 @@ form {
 
 span {
 
-    color: white;
+    color: whitesmoke;
     font-size: 30px;
     font-style: italic;
 
@@ -216,6 +208,21 @@ span {
 .txt-alert {
 
     color: white;
-    
+
+}
+
+.info-txt {
+
+    font-size: 50px;
+    font-style: italic;
+
+}
+
+.p-alert {
+
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+    color: greenyellow;
 
 }

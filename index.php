@@ -95,23 +95,32 @@
 
         <div class="txtalert-box">
 
-            <span>Info box WIP</span>
+            <span>InfoBox (WIP)</span>
 
             <div class="txt-alert">
 
                 <?php
 
                     $totalGeneral = 0;
+
                     $qttTotal = 0;
 
-                    foreach($_SESSION['products'] as $index => $product) {
-                        $totalGeneral += $product['total'];
-                        $qttTotal += $product['qtt'];
+                    if(!isset($_SESSION['products']) || empty($_SESSION['products'])) {
+                        
+                        echo "<p class='info-txt'>Hello ! To Start please add an article.</p>";
+                        
+                    } else {
+
+                        foreach($_SESSION['products'] as $index => $product) {
+                            $totalGeneral += $product['total'];
+                            $qttTotal += $product['qtt'];
+                        }
+                        
+                        echo "<p class='p-alert'>" . $_SESSION['alert'] . "</p>";
+                        echo "Il y a : " . "<td><strong>".$qttTotal."</strong></td>" . " articles dans votre panier.";
+                        echo "<p>Total à payer de votre panier : " . "<strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></p>"."<br>";
+                    
                     }
-
-                    echo "<p>Total à payer de votre panier : " . "<strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></p>"."<br>";
-                    echo "Il y a : " . "<td><strong>".$qttTotal."</strong></td>" . " articles dans votre panier.";
-
                 ?>
 
             </div>

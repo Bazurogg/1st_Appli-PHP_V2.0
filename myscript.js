@@ -10,7 +10,9 @@ const iconToggle = document.getElementById("toggle-bars");
 navToggle.addEventListener("click", () => {
      
     navBar.classList.toggle("active");
-    iconToggle.classList.toggle("active");
+    // iconToggle.classList.toggle("active");
+
+    console.log("clicked");
 
 })
 

@@ -2,6 +2,8 @@
 
     session_start();
 
+    $_SESSION['alert'] = " ";
+
     if(isset($_POST['submit'])) {  // vérification de la présence  de la clé "submit" dans le tableau $_POST qui correspond à l'attribut "name" du bouton.
 
         $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -18,14 +20,20 @@
                 "total" => $price*$qtt
 
             ];
-
+            
             $_SESSION['products'][] = $product;
+            $_SESSION['alert'] = "Congrats ! You have succesfully added : " . "$name" . " to your basket.";
+            
+        } else {
+
+            $_SESSION['alert'] = "Veuillez ajouter correctement l'article !";
 
         }
-
+    
     }
 
     header("location:index.php");
 
+    
 
 ?>

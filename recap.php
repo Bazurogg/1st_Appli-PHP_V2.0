@@ -13,11 +13,11 @@
 </head>
 <body>
 
-    <div class="main-recap">
-        
+    <div class="main">
+
         <div class="nav-box">
             
-            <div class="cart-navbar" id="nav-bar">
+            <div id="nav-bar">
     
                 <div class="navbar-iconbox" id="toggle-icon">
     
@@ -37,8 +37,7 @@
             </div>
 
         </div>
-  
-
+            
         <div class="recaptable-box">
 
             <?php
@@ -98,7 +97,11 @@
 
                 echo "<br>";
 
+                
+
             ?>
+
+
 
         </div>
     
@@ -106,7 +109,7 @@
 
 
 
-<script src="myscript.js"></script>
+    <script src="myscript.js"></script>
 
 </body>
 </html>

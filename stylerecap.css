@@ -174,8 +174,8 @@ table {
 
 th {
 
-    padding: 20px 0;
-    text-align: center;
+    padding: 20px;
+    text-align: left;
     font-weight: 500;
     font-size: 19px;
     color: #000000;
@@ -185,8 +185,9 @@ th {
 
 td{
     
-    
-    padding: 20px 0;
+
+    padding: 10px 20px;
+    text-align: left;
     font-weight: 300;
     font-size: 19px;
     color: #000000;

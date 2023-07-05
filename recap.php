@@ -97,14 +97,26 @@
                 }
 
                 echo "<br>";
-
-                
-
+            
             ?>
 
 
             <a href = 'traitement.php?action=deleteAll'><button id="dumpout">Cancel basket</button></a>
+            
+            <div class="txt-alert">
 
+                <?php
+
+                    if (isset($_SESSION['alert'])){
+                                        
+                        echo "<p class='p-alert'>" . $_SESSION['alert'] . "</p>";
+                        unset($_SESSION['alert']);
+                        
+                    }
+                
+                ?>
+
+            </div>
 
         </div>
     

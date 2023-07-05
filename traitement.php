@@ -29,11 +29,13 @@
                         ];
                         
                         $_SESSION['products'][] = $product;
-                        $_SESSION['alert'] = "Congrats ! You have succesfully added : " . "$name" . " to your basket.";
+                        $_SESSION['alert'] = "Congrats ! You have succesfully added : " . "$qtt" . " " . "$name" . " to your basket.";
                         
                     } else {
             
                         $_SESSION['alert'] = "Please add correctly an article !";
+                        // unset($_SESSION['alert']);
+                        header("location:index.php");
             
                     }
                 
@@ -46,10 +48,14 @@
 
                     unset($_SESSION['products']);
 
-                    $_SESSION['alert'] = "Your basket have cancelled !";
+                    $_SESSION['alert'] = "Your have canceled your basket !";
+                    
+                } else {
+                    
+                    $_SESSION['alert'] = "Your basket is already empty !";
 
-                
                 }
+
                 break;
             
             case "deleteItem":
@@ -61,7 +67,7 @@
                     
                     header("location:recap.php");
                     
-                    $_SESSION['alert'] = "Le produit a été supprimé.";
+                    $_SESSION['alert'] = "Your article has been canceled !";
                     
                     die(); //On stop l'exécution du script similaire à "exit()"
 
@@ -105,7 +111,7 @@
 
                         unset($_SESSION['products'][$index]);
                         
-                        $_SESSION['alert'] = "Le produit a été supprimé.";
+                        $_SESSION['alert'] = "Your article has been canceled !";
                         
                         header("location:recap.php");
 
@@ -114,7 +120,7 @@
                 }
                 break;
             
-            case "":
+            default:
                 
                 break;    
               

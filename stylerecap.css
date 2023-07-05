@@ -131,3 +131,12 @@ a {
 
 
 }
+
+.p-alert {
+
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+    color: rgb(255, 231, 145);
+
+}

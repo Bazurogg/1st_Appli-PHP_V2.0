@@ -55,22 +55,18 @@
                     "<div class='tbl-header'>",
                 
                         "<table cellpading='0' cellspacing='0' border='0'>",
-
                             "<thead>",
-
                                 "<tr>",
                                     "<th>#</th>",
                                     "<th>Name</th>",
                                     "<th>Price</th>",
                                     "<th>Quantity</th>",
+                                    "<th>Action</th>",
+                                    
                                     "<th>Total</th>",
-                                    "<th></th>",                               
                                 "</tr>",
-
                             "</thead>",
-
                         "</table>",
-
                     "</div>",
 
                     "<div class='tbl-content'>",
@@ -101,21 +97,15 @@
                             
                                 }
 
-                            "</tbody>";
+                                echo "<tr>",
+                                "<td colspan = 4>Total Price : </td>",
+                                "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
+                                "</tr>",
+                            
+                            "</tbody>",
 
                         "</table>";
                         
-                    "</div>";
-
-                    "<div class='tbl-total'>";
-                                
-                        "<table cellpading='0' cellspacing='0' border='0'>";        
-                            echo "<tr>",
-                            "<td colspan = 4>Total Price : </td>",
-                            "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
-                            "</tr>",
-                        "</table>",           
-
                     "</div>";
                     
                 }       

@@ -52,9 +52,9 @@
 
                     echo
 
-                    "<div class='tbl-header'>",
+                    "<div class='table-box'>",
                 
-                        "<table cellpading='0' cellspacing='0' border='0'>",
+                        "<table class='table-recap'>",
                             "<thead>",
                                 "<tr>",
                                     "<th>#</th>",
@@ -66,6 +66,7 @@
                                 "</tr>",
                             "</thead>",
                         "</table>",
+                        
                     "</div>",
 
                     "<div class='tbl-content'>",
@@ -106,6 +107,16 @@
                         "</table>";
                         
                     "</div>";
+
+                    "<div class='tbl-total'>";
+
+                        "<table cellpading='0' cellspacing='0' border='0'>";
+                        
+                        "</table>";
+                                
+
+                    "</div>";
+                    
                     
                 }       
             ?>

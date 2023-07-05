@@ -50,19 +50,22 @@
                     
                 } else {
 
-                    echo "<table>",
-                            "<thead>",
-                                "<tr>",
-                                    "<th>#</th>",
-                                    "<th>Name</th>",
-                                    "<th>Price</th>",
-                                    "<th>Quantity</th>",
-                                    "<th>Total</th>",
-                                "</tr>",
-                            "</thead>",
-                            "<tbody>";
+                    echo 
                     
-                    $totalGeneral = 0;
+                        "<div class='tbl-header'>",
+                            "<table cell>",
+                                "<thead>",
+                                    "<tr>",
+                                        "<th>#</th>",
+                                        "<th>Name</th>",
+                                        "<th>Price</th>",
+                                        "<th>Quantity</th>",
+                                        "<th>Total</th>",
+                                    "</tr>",
+                                "</thead>",
+                                "<tbody>";
+                        
+                            $totalGeneral = 0;
                     
 
                     foreach($_SESSION['products'] as $index => $product) {
@@ -91,17 +94,25 @@
                         
                         "</tbody>",
 
-                        "</table>";
+                    "</table>";
 
                 echo "Il y a : " . "<td><strong>".$qttTotal."</strong></td>" . " articles dans votre panier.";
                 }
 
                 echo "<br>";
             
-            ?>
+                if(!empty($_SESSION['products'])) {
+                ?>
+
+                    <a href = 'traitement.php?action=deleteAll'><button id="dumpout">Cancel basket</button></a>
+
+                <?php
+                }
+                ?>
 
 
-            <a href = 'traitement.php?action=deleteAll'><button id="dumpout">Cancel basket</button></a>
+
+
             
             <div class="txt-alert">
 

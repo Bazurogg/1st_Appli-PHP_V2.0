@@ -60,14 +60,14 @@
             
             case "deleteItem":
             
-                if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){ // Vérification si "action est bien appelé vai l'url.
-
+                if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){ // Vérification si "action est bien appelé via l'url.
+                    
+                    $_SESSION['alert'] = "Your have removed " . $_SESSION['products'][$_GET['id']]['name'] . " from your basket !";
                     unset($_SESSION['products'][$_GET['id']]);
                     $_SESSION['products'] = array_values($_SESSION['products']);
                     
                     header("location:recap.php");
                     
-                    $_SESSION['alert'] = "Your article has been canceled !";
                     
                     die(); //On stop l'exécution du script similaire à "exit()"
 
@@ -111,7 +111,7 @@
 
                         unset($_SESSION['products'][$index]);
                         
-                        $_SESSION['alert'] = "Your article has been canceled !";
+                        $_SESSION['alert'] = "Your have removed " . $_SESSION['products'][$_GET['id']]['name'] . " from your basket !";
                         
                         header("location:recap.php");
 

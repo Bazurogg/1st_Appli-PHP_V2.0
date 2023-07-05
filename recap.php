@@ -50,90 +50,111 @@
                     
                 } else {
 
-                    echo 
-                    
-                        "<div class='tbl-header'>",
-                            "<table cell>",
-                                "<thead>",
-                                    "<tr>",
-                                        "<th>#</th>",
-                                        "<th>Name</th>",
-                                        "<th>Price</th>",
-                                        "<th>Quantity</th>",
-                                        "<th>Total</th>",
-                                    "</tr>",
-                                "</thead>",
-                                "<tbody>";
-                        
-                            $totalGeneral = 0;
-                    
+                    echo
 
-                    foreach($_SESSION['products'] as $index => $product) {
-
-                        echo "<tr>",
-
-                                "<td>".$index."</td>",
-                                "<td>".$product['name']."</td>",
-                                "<td>".number_format($product['price'], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                                "<td>".$product['qtt']."</td>",
-                                "<td>".number_format($product['total'], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                                "<td class='manip'>"."<a href='traitement.php?action=increaseItem&id=$index' style='text-decoration:none;'>"."<button id='addonclick'>+</button>"."</a>"."<button id='dumpbtn'>"."<a href='traitement.php?action=deleteItem&id=$index' style='text-decoration:none;'>supprimer</a>"."</button>"."<a href='traitement.php?action=decreaseItem&id=$index' style='text-decoration:none;'>"."<button id='removeonclick'>-</button>"."</a>"."</td>",
-
-                            "</tr>";
-
-                        $totalGeneral += $product['total'];
-                        $qttTotal += $product['qtt'];
-                    }
-
-                    echo    "<tr>",
-                            
-                                "<td colspan = 4>Total Price : </td>",
-                                "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
-
-                            "</tr>",
-                        
-                        "</tbody>",
-
-                    "</table>";
-
-                echo "Il y a : " . "<td><strong>".$qttTotal."</strong></td>" . " articles dans votre panier.";
-                }
-
-                echo "<br>";
-            
-                if(!empty($_SESSION['products'])) {
-                ?>
-
-                    <a href = 'traitement.php?action=deleteAll'><button id="dumpout">Cancel basket</button></a>
-
-                <?php
-                }
-                ?>
-
-
-
-
-            
-            <div class="txt-alert">
-
-                <?php
-
-                    if (isset($_SESSION['alert'])){
-                                        
-                        echo "<p class='p-alert'>" . $_SESSION['alert'] . "</p>";
-                        unset($_SESSION['alert']);
-                        
-                    }
+                    "<div class='tbl-header'>",
                 
-                ?>
+                        "<table cellpading='0' cellspacing='0' border='0'>",
 
-            </div>
+                            "<thead>",
+
+                                "<tr>",
+                                    "<th>#</th>",
+                                    "<th>Name</th>",
+                                    "<th>Price</th>",
+                                    "<th>Quantity</th>",
+                                    "<th>Total</th>",
+                                    "<th></th>",                               
+                                "</tr>",
+
+                            "</thead>",
+
+                        "</table>",
+
+                    "</div>",
+
+                    "<div class='tbl-content'>",
+
+                        "<table cellpading='0' cellspacing='0' border='0'>",
+
+                            "<tbody>";
+                            
+                                $totalGeneral = 0;
+                                                            
+                                foreach($_SESSION['products'] as $index => $product) {
+                            
+        
+                                    echo "<tr>",
+            
+                                            "<td>".$index."</td>",
+                                            "<td>".$product['name']."</td>",
+                                            "<td>".number_format($product['price'], 2, ",", "&nbsp;")."&nbsp;€</td>",
+                                            "<td>".$product['qtt']."</td>",
+                                            "<td>".number_format($product['total'], 2, ",", "&nbsp;")."&nbsp;€</td>",
+                                            "<td class='manip'>"."<a href='traitement.php?action=increaseItem&id=$index' style='text-decoration:none;'>"."<button id='addonclick'>+</button>"."</a>"."<button id='dumpbtn'>"."<a href='traitement.php?action=deleteItem&id=$index' style='text-decoration:none;'>supprimer</a>"."</button>"."<a href='traitement.php?action=decreaseItem&id=$index' style='text-decoration:none;'>"."<button id='removeonclick'>-</button>"."</a>"."</td>",
+            
+                                        "</tr>";
+            
+                                    $totalGeneral += $product['total'];
+                                    $qttTotal += $product['qtt'];
+                            
+                            
+                                }
+
+                            "</tbody>";
+
+                        "</table>";
+                        
+                    "</div>";
+
+                    "<div class='tbl-total'>";
+                                
+                        "<table cellpading='0' cellspacing='0' border='0'>";        
+                            echo "<tr>",
+                            "<td colspan = 4>Total Price : </td>",
+                            "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
+                            "</tr>",
+                        "</table>",           
+
+                    "</div>";
+                    
+                }       
+            ?>
 
         </div>
+
+        <?php
+
+        echo "<br>";
+
+        echo "Il y a : " . "<td><strong>".$qttTotal."</strong></td>" . " articles dans votre panier.";
+                
+        if(!empty($_SESSION['products'])) {
+        ?>
+
+            <a href = 'traitement.php?action=deleteAll'><button id="dumpout">Cancel basket</button></a>
+
+            <?php
+        }
+
+        ?>
     
+        <div class="txt-alert">
+
+            <?php
+
+                if (isset($_SESSION['alert'])){
+                                    
+                    echo "<p class='p-alert'>" . $_SESSION['alert'] . "</p>";
+                    unset($_SESSION['alert']);
+                    
+                }
+            
+            ?>
+
+        </div>
+
     </div>
-
-
 
     <script src="myscript.js"></script>
 

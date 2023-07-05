@@ -18,7 +18,7 @@ html {
 
 body {
 
-    /* background: url(images/bg/wp7577782-autumn-fruits-wallpapers.jpg); */
+    background: url(images/bg/wp7577782-autumn-fruits-wallpapers.jpg);
     background-size: cover;
  
 }
@@ -138,5 +138,65 @@ a {
     font-weight: 600;
     font-style: italic;
     color: rgb(255, 231, 145);
+
+}
+
+
+
+/* [--------------------------------------------------------- T A B L E ------------------------------------------------------------------] */
+
+table {
+
+    width:100%;
+    table-layout: fixed;
+    border-radius: 5%;
+
+}
+
+.tbl-header {
+
+    background-color: rgba(255, 255, 255, 0.721);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+.tbl-content {
+
+    max-height:300px;
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.863);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+th {
+
+    padding: 20px 0;
+    text-align: left;
+    font-weight: 500;
+    font-size: 19px;
+    color: #000000;
+    text-transform: uppercase;
+    
+}
+
+td{
+    
+    padding: 20px 0;
+    font-weight: 300;
+    font-size: 19px;
+    color: #000000;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+
+}
+
+.tbl-total {
+
+    background-color: rgba(255, 255, 255, 0.721);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 
 }

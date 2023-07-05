@@ -51,14 +51,76 @@
                 
                 }
                 break;
+            
+            case "deleteItem":
+            
+                if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){ // Vérification si "action est bien appelé vai l'url.
 
+                    unset($_SESSION['products'][$_GET['id']]);
+                    $_SESSION['products'] = array_values($_SESSION['products']);
+                    
+                    header("location:recap.php");
+                    
+                    $_SESSION['alert'] = "Le produit a été supprimé.";
+                    
+                    die(); //On stop l'exécution du script similaire à "exit()"
+
+                }
+                break;
+
+            case "increaseItem":
+
+                if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){
+
+                    $index = $_GET['id']; // Affectation de l'index la valeur "id" récupérer par la méthode $_GET.
+                    
+                    $_SESSION['products'][$index]['qtt']++;  // on incrémente la valeur de "qtt" de l'index correspondant.
+
+                    $_SESSION['products'][$index]['total'] = $_SESSION['products'][$index]['price']*$_SESSION['products'][$index]['qtt'];
+    
+                    header("location:recap.php");
+
+                    die();
+
+                }
+                break;
                 
+            case "decreaseItem":
+                
+                if (isset($_GET['id'] ) && (isset($_SESSION['products'][$_GET['id']]))){
+
+                    $index = $_GET['id'];
+
+                    if ($_SESSION['products'][$index]['qtt'] > 1){ // On veux que lorsque la quantité tombe à zéro on supprime le produit cible.
+
+                        $_SESSION['products'][$index]['qtt']--; // On décrémente la "qtt" de l'index correspondant.
+
+                        $_SESSION['products'][$index]['total'] = $_SESSION['products'][$index]['price']*$_SESSION['products'][$index]['qtt'];
+        
+                        header("location:recap.php");
+    
+                        die();
+
+                    } else {
+
+                        unset($_SESSION['products'][$index]);
+                        
+                        $_SESSION['alert'] = "Le produit a été supprimé.";
+                        
+                        header("location:recap.php");
+
+                        die();
+                    }
+                }
+                break;
+            
             case "":
                 
                 break;    
               
 
         }
+        
     }
 
 

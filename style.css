@@ -143,8 +143,9 @@ h1 {
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
     border: 1px solid rgba(255, 255, 255, 0.44);
-    border-bottom-left-radius: 8%;
-    border-bottom-right-radius: 8%;
+    border-radius: 8%;
+    /* border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%; */
 
 }
 

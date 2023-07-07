@@ -55,9 +55,9 @@
                     "<div class='table-box'>",
                 
                         "<table class='table-recap'>",
-                            "<thead>",
+                            "<thead class='tbl-header'>",
                                 "<tr>",
-                                    "<th>#</th>",
+                                    "<th></th>",
                                     "<th>Name</th>",
                                     "<th>Price</th>",
                                     "<th>Quantity</th>",
@@ -65,7 +65,7 @@
                                     "<th></th>",
                                 "</tr>",
                             "</thead>",
-                            "<tbody>";
+                            "<tbody class='tbl-body'>";
                             
                                 $totalGeneral = 0;
                                                             
@@ -73,7 +73,7 @@
                             
         
                                     echo "<tr>",
-            
+
                                             "<td>".$index."</td>",
                                             "<td>".$product['name']."</td>",
                                             "<td>".number_format($product['price'], 2, ",", "&nbsp;")."&nbsp;€</td>",
@@ -91,10 +91,10 @@
                                        
                             "</tbody>";
 
-                            echo "<tfoot>",
+                            echo "<tfoot class='tbl-footer'>",
                                 "<tr>",
-                                    "<td colspan = 1>Total Price : </td>",
-                                    "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
+                                    "<td>Total Price : </td>",
+                                    "<td colspan = 5><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
                                 "</tr>",
                             "</tfoot>",
 
@@ -112,7 +112,7 @@
 
         echo "<br>";
 
-        echo "Il y a : " . "<td><strong>".$qttTotal."</strong></td>" . " articles dans votre panier.";
+        echo "<p class='basket-info'>Il y a : " . "<strong>".$qttTotal."</strong>" . " articles dans votre panier.</p>";
                 
         if(!empty($_SESSION['products'])) {
         ?>

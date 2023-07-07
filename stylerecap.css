@@ -141,65 +141,80 @@ a {
 
 }
 
+.basket-info {
 
+    color: white;
+
+}
 
 /* [--------------------------------------------------------- T A B L E ------------------------------------------------------------------] */
 
-table {
 
-    width:100%;
+.table-box {
+ 
+
+}
+
+.table-recap {
+
+    width: 840px;
     table-layout: fixed;
-    border-radius: 5%;
+    border-collapse: collapse;
 
 }
 
 .tbl-header {
 
-    background-color: rgba(255, 255, 255, 0.721);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-
-}
-
-.tbl-content {
+    position: sticky;
+    top: 0;
     
-    max-height:300px;
-    overflow-x:auto;
-    margin-top: 0px;
-    border: 1px solid rgba(255, 255, 255, 0.863);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
+.tbl-header tr {
+    
+    background: rgba(255, 255, 255, 0.721);
+    display: block;
+	position: relative;
+    text-align: justify;
 
-th {
+}
+
+.tbl-body {
+    
+    display: block;
+	height: 200px;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+}
+
+.tbl-body tr {
+
+    border-bottom: 1px solid rgba(255, 245, 238, 0.72);
+
+}
+
+th,td {
 
     padding: 20px;
-    text-align: left;
-    font-weight: 500;
-    font-size: 19px;
-    color: #000000;
-    text-transform: uppercase;
-    
-}
-
-td{
-    
-
-    padding: 10px 20px;
-    text-align: left;
-    font-weight: 300;
-    font-size: 19px;
-    color: #000000;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+	min-width: 130px;
 
 }
 
-.tbl-total {
+
+.tbl-footer {
     
     position: sticky;
-    background-color: rgba(255, 255, 255, 0.721);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    background-color: rgb(32, 38, 45);
+    bottom: 0;
+    display: block;
+
+}
+
+.tbl-footer tr {
+
+    color: lightgoldenrodyellow;
+    font-size: 18px;
 
 }
